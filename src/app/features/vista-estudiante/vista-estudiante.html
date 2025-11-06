@@ -1,0 +1,84 @@
+<p>vista-estudiante funciona y es de Analia!</p>
+
+<!--  binding por interpolación-->
+
+@if (nombre === undefined) {
+    <p> Bienvenido </p>
+} @else {
+    <p>Bienvenido, {{nombre}}.</p>
+}
+
+<p>Datos del Estudiante</p>
+<ul>
+  <li>Nombre: {{estudiante.nombre}}</li>
+  <li>Apellido: {{estudiante.apellido }}</li>
+  <li>Mail: {{estudiante.email}}</li>
+  <li>Edad: {{estudiante.edad}}</li>
+</ul>
+@if(estudiante.edad <18) {
+    <p> Eres menor de edad. No se puede inscribir</p>
+}
+@else {
+    <p> Eres mayor de edad. Puedes inscribirte</p>
+}
+
+
+<!--  property binding -->
+<img [src]="foto" alt="Foto del Estudiante" width="150" />
+
+<button (click)="saludar(nombre)" >Saludar</button>
+<form>
+  <label for="nombre">Nombre:</label>
+
+  <!-- two way data binding:  [(ngModel)] asocio son la variable del ts nombre-->
+  <input id="nombre" [(ngModel)]="nroMateria" name="nroMateria" />
+  <input type="submit" value="Enviar" />
+</form>
+
+<h2>Lista de Materias</h2>
+<ul>
+  @for(materia of listaMaterias; track materia.id) {
+    <li>{{materia.id}} - {{materia.nomMateria}}</li>
+  }
+</ul>
+
+<h2>Lista de Estudiantes</h2>
+<!-- si la lista puede que este vacia agrego @empty-->
+<ul>
+  @for(estudiante of listaEstudianes; track estudiante.id) {
+    <li>{{estudiante.id}} - {{estudiante.apellido}}, {{estudiante.nombre}}</li>
+  }
+  @empty {
+    <li>No hay estudiantes registrados.</li>
+  }
+</ul>
+
+<!-- select con for, empty, interpolacion, y property binding-->
+<h2>Lista de Materias</h2>
+<select name="lstMaterias">
+  @for(materia of listaMaterias; track materia.id) {
+    <option [value]=materia.id>{{materia.nomMateria}}</option>
+  }
+  @empty {
+      <option>No hay materias disponibles.</option>  }
+</select>
+
+
+@switch(nroMateria) {
+  @case("1") {
+    <p>Has seleccionado Programación I</p>
+  }
+  @case("2") {
+    <p>Has seleccionado Programación II</p>
+  }
+  @case("3") {
+    <p>Has seleccionado Base de Datos</p>
+  }
+  @case("4") {
+    <p>Has seleccionado Sistemas Operativos</p>
+  }
+  @default {
+    <p>Materia no reconocida</p>
+  }
+}
+
