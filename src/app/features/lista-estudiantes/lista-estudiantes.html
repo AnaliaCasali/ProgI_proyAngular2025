@@ -1,0 +1,7 @@
+ <h2>Lista de estudiantes</h2>
+
+    <ul>
+      @for (e of estudiantes; track e.id) {
+        <li>{{ e.nombre }} {{ e.apellido }} - ({{ e.email }})</li>
+      }
+    </ul>
