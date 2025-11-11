@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana",
+    "apellido": "García",
+    "email": "ana@gmail.com",
+    "edad": 22,
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "Luis",
+    "apellido": "Pérez",
+    "email": "luis@gmail.com",
+    "edad": 25,
+    "activo": false
+  },
+  {
+    "id": 3,
+    "nombre": "Marta",
+    "apellido": "Díaz",
+    "email": "marta@gmail.com",
+    "edad": 20,
+    "activo": true
+  }
+]
