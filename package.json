@@ -9,8 +9,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:proyAngular2025": "node dist/proyAngular2025/server/server.mjs"
-
-
   },
   "prettier": {
     "printWidth": 100,
