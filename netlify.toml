@@ -1,5 +1,5 @@
 [build]
-publish =”dist/ProgI_proyAngular2025”
+publish =”dist/proy-angular2025”
 [[redirects]]
 from = ”/*”
 to = “/index.html”
