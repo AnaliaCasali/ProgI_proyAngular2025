@@ -1,0 +1,7 @@
+[build]
+publish =”dist/ProgI_proyAngular2025”
+[[redirects]]
+from = ”/*”
+to = “/index.html”
+status = 200
+registrarse en netlify con github account
