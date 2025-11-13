@@ -1,6 +1,7 @@
+
 [build]
-  command = "npm run build"
-  publish = "dist/proy-angular2025"
+  command = "npm run build:ssr"
+  publish = "dist/proyAngular2025/browser"
 
 [[redirects]]
   from = "/*"
