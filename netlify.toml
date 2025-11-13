@@ -1,6 +1,8 @@
 [build]
-publish =”dist/proy-angular2025”
+  command = "npm run build"
+  publish = "dist/proy-angular2025"
+
 [[redirects]]
-from = ”/*”
-to = “/index.html”
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
