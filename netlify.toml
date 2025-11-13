@@ -4,4 +4,3 @@ publish =”dist/proy-angular2025”
 from = ”/*”
 to = “/index.html”
 status = 200
-registrarse en netlify con github account
