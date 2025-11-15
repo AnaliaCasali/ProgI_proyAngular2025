@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "build:github": "ng build --configuration production --base-href=\"/ProgI_proyAngular2025/\"",
+    "deploy:github": "npm run build:github && npx angular-cli-ghpages --dir=dist/proyAngular2025/browser",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
