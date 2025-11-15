@@ -1,18 +1,8 @@
 
 [build]
-  command = "npm run build:netlify"
+  command = "npm run build:ssr"
   publish = "dist/proyAngular2025/browser"
-  environment = { NODE_VERSION = "18" }
 
-[build.environment]
-  NODE_OPTIONS = "--max_old_space_size=4096"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Para SPAs - manejo de rutas del cliente
 [[redirects]]
   from = "/*"
   to = "/index.html"
