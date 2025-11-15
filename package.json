@@ -2,9 +2,12 @@
   "name": "proy-angular2025",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+     "ng": "ng",
     "start": "ng serve",
+    "build": "ng build --configuration production",
+    "build:netlify": "ng build --configuration production && npm run prerender",
     "build:ssr": "ng build --configuration production && ng run proyAngular2025:server:production",
+    "prerender": "ng run proyAngular2025:prerender",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:proyAngular2025": "node dist/proyAngular2025/server/server.mjs"
