@@ -12,6 +12,7 @@
       "architect": {
         "build": {
           "builder": "@angular/build:application",
+
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -63,18 +64,7 @@
           },
           "defaultConfiguration": "production"
         },
-          "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "routes": [
-              "/",
-              "/vista",
-              "/lista",
-              "/login"
-                       ]
-          }
-        },
-        "serve": {
+                "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
